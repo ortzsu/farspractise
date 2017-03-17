@@ -1,0 +1,40 @@
+---
+title: "How to use farspractise"
+author: "Zsuzsanna Ortutay"
+date: "2017-03-17"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The farspractise package allows you to analyze data about fatal accidents by using the Fatality Analysis Reporting Sysetm from the US National Highway Traffic Safety Administration.
+
+## Functions
+
+The package contains 5 functions from which *fars_summarize_years()* prepares  a report of the fatal accidents in the desired years while *fars_map_state()* plots the observations of the given years in the provided state. The remaining functions (*fars_read()*, *make_filename()*, *fars_read_years()*) are called by these two functions and are also available for the user. The working directory should contain the observational data.
+
+
+## Example data
+
+The package provides data from the observations of years 2013, 2014, 2015 for practicing purposes.
+
+## Examples
+
+You can plot fatal accident data in Pennsylvania in 2013 by calling:
+```{r example_1, eval = FALSE}
+library(farspractise)
+setwd(system.file("extdata",package = "farspractise"))
+fars_map_state(39,2013)
+```
+Alternatively, you can get summarized data from observations in years 2013 - 2015 in all states of the USA by calling
+```{r example_2, eval = FALSE}
+fars_summarize_years(2013:2015)
+```
+
+Session info:
+
+```{r sessioninfo}
+sessionInfo()
+```
