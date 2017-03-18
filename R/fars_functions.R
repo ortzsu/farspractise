@@ -1,3 +1,5 @@
+globalVariables(c("STATE","year","MONTH","n"))
+
 #' Reading data from the Fatality Analysis Reporting System
 
 #' The fars_read function reads data file into a dplyr data table.
@@ -62,6 +64,7 @@ make_filename <- function(year) {
 #' fars_read_years(2013:2015)
 #' }
 #'
+#'
 #' @export
 fars_read_years <- function(years) {
         lapply(years, function(year) {
@@ -92,6 +95,7 @@ fars_read_years <- function(years) {
 #' \dontrun{
 #' fars_summarize_years(2013:2015)
 #' }
+#'
 #'
 #' @export
 fars_summarize_years <- function(years) {
