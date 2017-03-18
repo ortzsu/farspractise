@@ -9,10 +9,9 @@
 #' If file with the given name does not exist, the function returns an error message.
 #'
 #' @examples
+#' \dontrun{
 #' fars_read("accident_2013.csv.bz2")
-#'
-#' @importFrom readr read_csv
-#' @importFrom dplyr tbl_df
+#' }
 #'
 #' @export
 fars_read <- function(filename) {
@@ -34,7 +33,9 @@ fars_read <- function(filename) {
 #' @return The function generates a filename with the year number given by the user.
 #'
 #' @examples
+#' \dontrun{
 #' make_filename(2013)
+#' }
 #'
 #' @export
 make_filename <- function(year) {
@@ -56,10 +57,10 @@ make_filename <- function(year) {
 #' the function sends warning message(s).
 #'
 #' @examples
+#' \dontrun{
 #' fars_read_years(2013)
 #' fars_read_years(2013:2015)
-#'
-#' @importFrom dplyr mutate select
+#' }
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -88,10 +89,9 @@ fars_read_years <- function(years) {
 #' For the years not represented, the function sends warning message(s).
 #'
 #' @examples
+#' \dontrun{
 #' fars_summarize_years(2013:2015)
-#'
-#' @importFrom dplyr bind_rows group_by summarize
-#' @importFrom tidyr spread
+#' }
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -117,11 +117,9 @@ fars_summarize_years <- function(years) {
 #' the function returns the message "no  accidents to plot".
 #'
 #' @examples
+#' \dontrun{
 #' fars_map_state(39,2013)
-#'
-#' @importFrom dplyr filter
-#' @importFrom maps map
-#' @importFrom graphics points
+#' }
 #'
 #' @export
 

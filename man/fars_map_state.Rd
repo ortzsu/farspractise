@@ -23,7 +23,9 @@ The "fars_map_state" function plots the observations of fatal accidents on the m
 provided state in the year defined by the user.
 }
 \examples{
+\dontrun{
 fars_map_state(39,2013)
+}
 
 }
 

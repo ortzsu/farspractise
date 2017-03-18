@@ -21,8 +21,10 @@ every data tables contain two columns (month, year)
 and the number of rows is defined by the number of observations.
 }
 \examples{
+\dontrun{
 fars_read_years(2013)
 fars_read_years(2013:2015)
+}
 
 }
 

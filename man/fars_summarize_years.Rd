@@ -19,7 +19,9 @@ The "fars_summarize_years" function summarizes the number of observations by mon
 The results are presented in a tidyr data table.
 }
 \examples{
+\dontrun{
 fars_summarize_years(2013:2015)
+}
 
 }
 

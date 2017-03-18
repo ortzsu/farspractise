@@ -21,7 +21,9 @@ The fars_read function reads data file into a dplyr data table.
 If the data file does not exist in the working directory, this function throws an error.
 }
 \examples{
+\dontrun{
 fars_read("accident_2013.csv.bz2")
+}
 
 }
 
